@@ -60,37 +60,38 @@ print("1) Add Score\n"
       "3) See Overall stats\n"
       "4) Quit\n")
 main_menu = int(input())
-while main_menu != 4:
-    if main_menu == 1:
-        print("What's The Team's Name? ")
-        team_name = input()
-        #- Games Played
-        print("How many Games Played? ")
-        games = int(input())
-        #   - Wins
-        print("How Many Wins? ")
-        wins = int(input())
-        #   - Losses
-        print("How Many Loses? ")
-        loses = int(input())
-        #   - Ties
-        print("How Many Ties? ")
-        ties = int(input())
-        #   - Goals For
-        print("How Many Goals For? ")
-        goals_for = int(input())
-        #   - Goals against
-        print("And How Many Goals Against? ")
-        goals_against = int(input())
-        team_score = wins + ties + goals_for - loses - goals_against
-        print(team_name,"has", team_score, "points")
-    elif main_menu == 2:
-        print("which team's stats do you want top see?")
-        if find_team_name == team_name:
-            print(team_name,"has",wins,"wins,",loses,"loses,", ties,"ties,",goals_for,"goals for, and",goals_against,"goals against.",team_name,"current score:",team_score,"points")
-        else:
-            print("That Team Was Not Found")
-    elif main_menu == 3:
-        print()
-    elif main_menu == 4:
-        print("END!")
+if main_menu == 1:
+    for counter in range(team_amount):
+        print("Gor it!\nWhat's The Team's Name? ")
+    print("What's The Team's Name? ")
+    team_name = input()
+    #- Games Played
+    print("How many Games Played? ")
+    games = int(input())
+    #   - Wins
+    print("How Many Wins? ")
+    wins = int(input())
+    #   - Losses
+    print("How Many Loses? ")
+    loses = int(input())
+    #   - Ties
+    print("How Many Ties? ")
+    ties = int(input())
+    #   - Goals For
+    print("How Many Goals For? ")
+    goals_for = int(input())
+    #   - Goals against
+    print("And How Many Goals Against? ")
+    goals_against = int(input())
+    team_score = wins + ties + goals_for - loses - goals_against
+    print(team_name,"has", team_score, "points")
+elif main_menu == 2:
+    print("which team's stats do you want top see?")
+    if find_team_name == team_name:
+         print(team_name,"has",wins,"wins,",loses,"loses,", ties,"ties,",goals_for,"goals for, and",goals_against,"goals against.",team_name,"current score:",team_score,"points")
+    else:
+        print("That Team Was Not Found")
+elif main_menu == 3:
+    print("Coming Soon!")
+elif main_menu == 4:
+    print("\nEND!")
