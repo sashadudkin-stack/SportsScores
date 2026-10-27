@@ -61,30 +61,33 @@ print("1) Add Score\n"
       "4) Quit\n")
 main_menu = int(input())
 if main_menu == 1:
-    for counter in range(team_amount):
-        print("Gor it!\nWhat's The Team's Name? ")
-    print("What's The Team's Name? ")
-    team_name = input()
-    #- Games Played
-    print("How many Games Played? ")
-    games = int(input())
-    #   - Wins
-    print("How Many Wins? ")
-    wins = int(input())
-    #   - Losses
-    print("How Many Loses? ")
-    loses = int(input())
-    #   - Ties
-    print("How Many Ties? ")
-    ties = int(input())
-    #   - Goals For
-    print("How Many Goals For? ")
-    goals_for = int(input())
-    #   - Goals against
-    print("And How Many Goals Against? ")
-    goals_against = int(input())
-    team_score = wins + ties + goals_for - loses - goals_against
-    print(team_name,"has", team_score, "points")
+    if team_amount <= 1:
+        print("You Need At Least Two Teams!\nBye!")
+    else:
+        for counter in range(team_amount):
+            print("Gor it!\nWhat's The Team's Name? ")
+        print("What's The Team's Name? ")
+        team_name = input()
+        #- Games Played
+        print("How many Games Played? ")
+        games = int(input())
+        #   - Wins
+        print("How Many Wins? ")
+        wins = int(input())
+        #   - Losses
+        print("How Many Loses? ")
+        loses = int(input())
+        #   - Ties
+        print("How Many Ties? ")
+        ties = int(input())
+        #   - Goals For
+        print("How Many Goals For? ")
+        goals_for = int(input())
+        #   - Goals against
+        print("And How Many Goals Against? ")
+        goals_against = int(input())
+        team_score = wins + ties + goals_for - loses - goals_against
+        print(team_name,"has", team_score, "points")
 elif main_menu == 2:
     print("which team's stats do you want top see?")
     if find_team_name == team_name:
