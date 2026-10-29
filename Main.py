@@ -61,37 +61,59 @@ print("1) Add Score\n"
       "4) Quit\n")
 main_menu = int(input())
 if main_menu == 1:
-    if team_amount <= 1:
-        print("You Need At Least Two Teams!\nBye!")
-    else:
-        for counter in range(team_amount):
-            print("Gor it!\nWhat's The Team's Name? ")
-        print("What's The Team's Name? ")
+    # if team_amount <= 1:
+    #     print("You Need At Least Two Teams!\nBye!")
+    # else:
+    #     for counter in range(team_amount):
+        print("OK!\nWhat's The First Team's Name? ")
         team_name = input()
+        print("What's The Second Team's Name? ")
+        team_name2 = input()
         #- Games Played
-        print("How many Games Played? ")
+        print("How Many Games First Team Played? ")
         games = int(input())
+        print("how Many Games Second Team Played?")
+        games2 = int(input())
         #   - Wins
-        print("How Many Wins? ")
+        print("How Many First Team Won? ")
         wins = int(input())
+        print("How Many Second Team Won? ")
+        wins2 = int(input())
         #   - Losses
-        print("How Many Loses? ")
+        print("How Many Games First team Lost? ")
         loses = int(input())
+        print("How Many Games Second Team Lost?")
+        loses2 = int(input())
         #   - Ties
-        print("How Many Ties? ")
+        print("How Many Ties First Team Have?")
         ties = int(input())
+        print("How Many Ties Second Team Have?")
+        ties2 = int(input())
         #   - Goals For
-        print("How Many Goals For? ")
+        print("How Many Goals For First Team Have?")
         goals_for = int(input())
+        print("How Many Goals For Second Team Have?")
+        goals_for2 = int(input())
         #   - Goals against
-        print("And How Many Goals Against? ")
+        print("How Many Goals Against First Team Have?")
         goals_against = int(input())
+        print("And How Many Goals Against Second Team Have?")
+        goals_against2 = int(input())
         team_score = wins + ties + goals_for - loses - goals_against
+        team_score2 = wins2 + ties2 + goals_for2 - loses2 - goals_against2
         print(team_name,"has", team_score, "points")
+        print(team_name2,"has", team_score2, "points")
+        if team_score > team_score2:
+            print(team_name,"Won!")
+        elif team_score < team_score2:
+            print(team_name2,"Won!")
+        else:
+            print("TIE!")
 elif main_menu == 2:
     print("which team's stats do you want top see?")
     if find_team_name == team_name:
-         print(team_name,"has",wins,"wins,",loses,"loses,", ties,"ties,",goals_for,"goals for, and",goals_against,"goals against.",team_name,"current score:",team_score,"points")
+         print(team_name,"has",wins,"wins,\n",loses,",loses\n", ties,"ties,\n",goals_for,"goals for,\nand",goals_against,"goals against.\n",team_name,"current score:",team_score,"points")
+         print(team_name2,"has", wins2,"wins,\n",loses2,"loses,\n",ties2,"ties,\n",goals_for2,"goals for",goals_against2,"goals againsts.\n",team_name2,"current score:",team_score2,"points" )
     else:
         print("That Team Was Not Found")
 elif main_menu == 3:
